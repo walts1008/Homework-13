@@ -1,0 +1,33 @@
+body {
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.not-devoured {
+  float: left;
+  padding: 10px;
+  margin: 10px;
+}
+
+.devoured {
+  float: right;
+  padding: 10px;
+  margin: 10px;
+}

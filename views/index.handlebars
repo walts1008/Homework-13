@@ -1,0 +1,44 @@
+<h1>Eat-The-Burger</h1>
+
+<div class="not-devoured">
+    <h2>Want to devour these burgers?</h2>
+
+    <div class="not-devoured-content">
+      {{#each burgers}}
+        {{#unless devoured}}
+        {{!-- {{name}} --}}
+          {{> burgers/burger-block devoured=false}}
+        {{/unless}}
+      {{/each}}
+    </div>
+</div>
+
+<div class='devoured'>
+    <h2>Devoured burgers!</h2>
+
+    <div class='devoured-content'>
+      {{#each burgers}}
+        {{#if devoured}}
+        {{!-- {{name}} --}}
+          {{> burgers/burger-block devoured=true}}
+        {{/if}}
+      {{/each}}
+    </div>
+</div>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="bur">Burger Name:</label>
+    <input type="text" id="bur" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="devoured">Devoured?</label><br>
+    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+    <input type="radio" name="devoured" value="0"> Whole
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
